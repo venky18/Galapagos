@@ -78,6 +78,46 @@ window.RactiveEditFormCodeContainer = Ractive.extend({
 
 })
 
+window.RactiveEditFormCodeContainer = Ractive.extend({
+
+  data: -> {
+    code:  undefined # String
+  , id:    undefined # String
+  , label: undefined # String
+  , name:  undefined # String
+  , value: undefined # String
+  }
+
+  oninit: ->
+
+    @set('code', @get('value').join('\n'))
+
+    @observe('code'
+    , (code) ->
+        @set('value', code.split('\n'))
+    )
+
+    @observe('value'
+    , (value) ->
+        @set('code', value.join('\n'))
+    )
+
+  isolated: true
+
+  lazy: true
+
+  components: {
+    codeContainer: RactiveCodeContainerMultiline
+  }
+
+  template:
+    """
+    <label for="{{id}}">{{label}}</label><br>
+    <codeContainer id="{{id}}" code="{{code}}" extraAttrs="name='{{name}}'" />
+    """
+
+})
+
 # INCOMPLETE
 #window.RactiveCodeContainerSingleLine = RactiveCodeContainerBase.extend({
 #
