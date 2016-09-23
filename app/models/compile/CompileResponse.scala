@@ -38,7 +38,7 @@ object CompileResponse {
       reporters   mapValues (s => modelResult     map (_.compileReporter(s))     getOrElse FailureExceptionNel))
 
   def exportNlogo(modelResult: CompileResult[CompiledModel]): CompileResult[String] =
-    modelResult.map(cm => ModelReader.formatModel(cm.model, CompilerUtilities))
+    modelResult.map(cm => ModelReader.formatModel(cm.model))
 
   private val FailureMessage      = "Model failed to compile"
   private val FailureExceptionNel = new CompilerException(FailureMessage, 0, 0, "").failureNel[String]
