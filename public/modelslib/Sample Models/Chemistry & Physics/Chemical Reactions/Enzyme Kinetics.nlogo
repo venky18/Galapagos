@@ -148,10 +148,10 @@ end
 GRAPHICS-WINDOW
 289
 10
-649
-391
-12
-12
+647
+369
+-1
+-1
 14.0
 1
 10
@@ -215,7 +215,7 @@ Kr
 Kr
 0.0
 100.0
-0
+0.0
 1.0
 1
 NIL
@@ -230,7 +230,7 @@ Kc
 Kc
 0.0
 100.0
-80
+80.0
 1.0
 1
 NIL
@@ -245,7 +245,7 @@ Kd
 Kd
 0.0
 100.0
-62
+62.0
 1.0
 1
 NIL
@@ -343,7 +343,7 @@ volume
 volume
 0.0
 1000.0
-50
+50.0
 25.0
 1
 molecules
@@ -401,9 +401,11 @@ This model demonstrates the kinetics of single-substrate enzyme-catalysis. The i
 
 The standard equation for this reaction is shown below.
 
-                      Kc          Kr
-            E + S <=======> E-S ------> E + P
-                      Kd
+```text
+                  Kc          Kr
+        E + S <=======> E-S ------> E + P
+                  Kd
+```
 
 Here E represents Enzyme, S Substrate, E-S Enzyme-Substrate complex, and P product.  The rate constants are Kc for complex formation, Kd for complex dissociation, Kr for catalysis.  The first step in catalysis is the formation of the E-S complex.  This can consist of either covalent or non-covalent bonding.  The rates of complex formation and dissociation are very fast because they are determined by collision and separation of the molecules.  The next step is for the enzyme to catalyze the conversion of substrate to product.  This rate is much slower because the energy required for catalysis is much higher than that required for collision or separation.
 
@@ -802,9 +804,8 @@ false
 0
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
-
 @#$#@#$#@
-NetLogo 5.2.1-RC1
+NetLogo 6.0-BETA1
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
@@ -820,7 +821,6 @@ true
 0
 Line -7500403 true 150 150 90 180
 Line -7500403 true 150 150 210 180
-
 @#$#@#$#@
 0
 @#$#@#$#@

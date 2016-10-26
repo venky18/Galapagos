@@ -122,10 +122,10 @@ end
 GRAPHICS-WINDOW
 134
 10
-687
-584
-90
-90
+685
+562
+-1
+-1
 3.0
 1
 10
@@ -178,7 +178,7 @@ NIL
 NIL
 NIL
 NIL
-1
+0
 
 BUTTON
 9
@@ -195,7 +195,7 @@ NIL
 NIL
 NIL
 NIL
-1
+0
 
 @#$#@#$#@
 ## WHAT IS IT?
@@ -216,7 +216,9 @@ The vectors show you in what direction and how forcefully an appropriate specime
 
 Even though behavior of particles can be interesting and possibly unanticipated, owing to forces not being distributed uniformly in the field, or some other factor, we have chosen, for clarity, a vector field with a logical and consistent relation between location in space and size/orientation of the force.  The vector field chosen for this particular model is
 
-    - y d/dx  +  x d/dy
+```text
+- y d/dx  +  x d/dy
+```
 
 Ideally, in the particular force field modeled here, the particle trajectories should be concentric circles (that is, the particle should go round and round along the same circular trajectory).
 
@@ -240,7 +242,9 @@ Place particles in different parts of the world.  Does the particle's position h
 
 Try a different vector field by changing it in the `setup-vector`, `force-x`, and `force-y` procedures.  For instance, if you choose
 
-    x d/dx - y d/dy
+```text
+x d/dx - y d/dy
+```
 
 the integral curves will be hyperbolas.
 
@@ -553,9 +557,8 @@ false
 0
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
-
 @#$#@#$#@
-NetLogo 5.2.0
+NetLogo 6.0-BETA1
 @#$#@#$#@
 setup
 place-particle 0 max-pycor - 3
@@ -574,7 +577,6 @@ true
 0
 Line -7500403 true 150 150 90 180
 Line -7500403 true 150 150 210 180
-
 @#$#@#$#@
 0
 @#$#@#$#@

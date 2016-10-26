@@ -37,10 +37,10 @@ end
 GRAPHICS-WINDOW
 210
 10
-628
-449
-25
-25
+626
+427
+-1
+-1
 8.0
 1
 10
@@ -133,9 +133,11 @@ The rules of the game are as follows.  Each cell checks the state of itself and 
 
 There are certain recurring shapes in Life, for example, the "glider" and the "blinker". The glider is composed of 5 cells which form a small arrow-headed shape, like this:
 
-       O
-        O
-      OOO
+```text
+   O
+    O
+  OOO
+```
 
 This glider will wiggle across the world, retaining its shape.  A blinker is a block of three cells (either up and down or left and right) that rotates between horizontal and vertical orientations.
 
@@ -519,9 +521,8 @@ false
 0
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
-
 @#$#@#$#@
-NetLogo 5.2.0
+NetLogo 6.0-BETA1
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
@@ -537,7 +538,6 @@ true
 0
 Line -7500403 true 150 150 90 180
 Line -7500403 true 150 150 210 180
-
 @#$#@#$#@
 0
 @#$#@#$#@

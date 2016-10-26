@@ -152,10 +152,10 @@ end
 GRAPHICS-WINDOW
 231
 10
-661
-461
-10
-10
+659
+439
+-1
+-1
 20.0
 1
 10
@@ -217,9 +217,9 @@ This template contains code that can serve as a starting point for creating new 
 
 ## HOW IT WORKS
 
-In activities like Disease, each client controls a single turtle on the server.  These turtles are a breed called STUDENTS.  When a client logs in we create a new student turtle and set it up with the default attributes.  Students own a variable for every widget on the client that holds a state, that is, sliders, switches, choosers, and input boxes.  Whenever a user changes one of these elements on the client, a message is sent to the server.  The server catches the message and stores the result.  In this example a slider is used to demonstrate this behavior.  You can also send messages to the client-side widgets using hubnet-send.  Monitors on clients must be updated manually by the model, that is you must send a message to a monitor every time you want the value displayed to change. For example, if you have a monitor that displays the current location of the client's avatar, you must send a message to the client like this:
+In activities like Disease, each client controls a single turtle on the server.  These turtles are a breed called STUDENTS.  When a client logs in we create a new student turtle and set it up with the default attributes.  Students own a variable for every widget on the client that holds a state, that is, sliders, switches, choosers, and input boxes.  Whenever a user changes one of these elements on the client, a message is sent to the server.  The server catches the message and stores the result.  In this example a slider is used to demonstrate this behavior.  You can also send messages to the client-side widgets using `hubnet-send`.  Monitors on clients must be updated manually by the model, that is you must send a message to a monitor every time you want the value displayed to change. For example, if you have a monitor that displays the current location of the client's avatar, you must send a message to the client like this:
 
-     hubnet-send "location" (word xcor " " ycor)
+     hubnet-send user-id "location" (word xcor " " ycor)
 
 whenever the client moves.  Buttons on the client side send but do not receive messages.  When a user presses a button, a message is sent to the server.  The server catches the message and executes the appropriate commands.  In this case, the commands should always be turtle commands since the clients control only a single turtle.
 
@@ -510,9 +510,8 @@ false
 0
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
-
 @#$#@#$#@
-NetLogo 5.2.0
+NetLogo 6.0-BETA1
 @#$#@#$#@
 need-to-manually-make-preview-for-this-model
 @#$#@#$#@
@@ -603,10 +602,10 @@ SLIDER
 111
 step-size
 step-size
-1
-5
+1.0
+5.0
 2
-1
+1.0
 1
 NIL
 HORIZONTAL
@@ -632,7 +631,6 @@ true
 0
 Line -7500403 true 150 150 90 180
 Line -7500403 true 150 150 210 180
-
 @#$#@#$#@
 0
 @#$#@#$#@

@@ -54,10 +54,10 @@ end
 GRAPHICS-WINDOW
 150
 10
-642
-283
-120
-60
+640
+261
+-1
+-1
 2.0
 1
 10
@@ -110,7 +110,7 @@ NIL
 NIL
 NIL
 NIL
-1
+0
 
 BUTTON
 15
@@ -142,7 +142,7 @@ Start from a\nsingle cell
 TEXTBOX
 20
 127
-132
+145
 162
 Start from the end\nof the previous run
 11
@@ -166,11 +166,13 @@ In his book, "A New Kind of Science", Stephen Wolfram argues that simple computa
 
 As the CA computes, each patch checks the color of itself and the patches directly to the left and right of it, and then paints the patch below it according to Rule 30:
 
-    Y Y Y    Y Y B    Y B Y    Y B B
-      B        B        B        Y
+```text
+Y Y Y    Y Y B    Y B Y    Y B B
+  B        B        B        Y
 
-    B Y Y    B Y B    B B Y    B B B
-      Y        Y        Y        B
+B Y Y    B Y B    B B Y    B B B
+  Y        Y        Y        B
+```
 
 For example, if we have a Rule 30 CA, and the current cell is black and its left neighbor is yellow and its right neighbor is yellow, the cell below it is painted black.
 
@@ -552,9 +554,8 @@ false
 0
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
-
 @#$#@#$#@
-NetLogo 5.2.0
+NetLogo 6.0-BETA1
 @#$#@#$#@
 setup
 repeat world-height - 1 [ go ]
@@ -572,7 +573,6 @@ true
 0
 Line -7500403 true 150 150 90 180
 Line -7500403 true 150 150 210 180
-
 @#$#@#$#@
 0
 @#$#@#$#@

@@ -87,10 +87,10 @@ end
 GRAPHICS-WINDOW
 328
 10
-707
-410
-20
-20
+705
+388
+-1
+-1
 9.0
 1
 10
@@ -143,7 +143,7 @@ NIL
 NIL
 NIL
 NIL
-1
+0
 
 SLIDER
 9
@@ -154,7 +154,7 @@ yellow-molecules
 yellow-molecules
 0.0
 500.0
-250
+250.0
 1.0
 1
 NIL
@@ -169,7 +169,7 @@ blue-molecules
 blue-molecules
 0.0
 500.0
-250
+250.0
 1.0
 1
 NIL
@@ -247,15 +247,21 @@ This model shows how a simple chemical system comes to different equilibrium sta
 
 This model simulates two simple reactions of four molecules. The reactions can be written:
 
-            A + B =======> C + D
+```text
+        A + B =======> C + D
+```
 
 and
 
-            C + D =======> A + B
+```text
+        C + D =======> A + B
+```
 
 This can also be written as a single, reversible reaction:
 
-            A + B <=======> C + D
+```text
+        A + B <=======> C + D
+```
 
 A classic real-life example of such a reaction occurs when carbon monoxide reacts with nitrogen dioxide to produce carbon dioxide and nitrogen monoxide (or, nitric oxide).  The reverse reaction (where carbon dioxide and nitrogen monoxide react to form carbon monoxide and nitrogen dioxide) is also possible. While all substances in the reaction are gases, we could actually watch such a system reach equilibrium as nitrogen dioxide (NO<sub>2</sub>) is a visible reddish colored gas. When nitrogen dioxide (NO<sub>2</sub>) combines with carbon monoxide (CO), the resulting products -- nitrogen monoxide (NO) and carbon dioxide (CO<sub>2</sub>) -- are colorless, causing the system to lose some of its reddish color. Ultimately the system comes to a state of equilibrium with some of the "reactants" and some of the "products" present.
 
@@ -611,9 +617,8 @@ false
 0
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
-
 @#$#@#$#@
-NetLogo 5.2.1-M3
+NetLogo 6.0-BETA1
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
@@ -629,7 +634,6 @@ true
 0
 Line -7500403 true 150 150 90 180
 Line -7500403 true 150 150 210 180
-
 @#$#@#$#@
 1
 @#$#@#$#@
