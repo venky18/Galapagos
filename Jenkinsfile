@@ -35,11 +35,4 @@ pipeline {
     }
   }
 
-  post {
-    always {
-      library 'netlogo-shared'
-      sendNotifications('NetLogo/Galapagos', currentBuild.result)
-    }
-  }
-
 }
